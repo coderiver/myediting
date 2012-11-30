@@ -1,0 +1,36 @@
+@charset "IBM866";
+/*variables*/
+/*for sprites*/
+/*font-face*/
+@font-face {
+  font-family: 'MetaMEdiusIt';
+  src: local("☺"), url("../fonts/metamedit.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Conv_MetaPro-Medium';
+  src: url("../fonts/MetaPro-Medium.eot");
+  src: local("☺"), url("../fonts/MetaPro-Medium.woff") format("woff"), url("../fonts/MetaPro-Medium.ttf") format("truetype"), url("../fonts/MetaPro-Medium.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Conv_helveticath';
+  src: url("../fonts/helveticath.eot");
+  src: local("☺"), url("../fonts/helveticath.woff") format("woff"), url("../fonts/helveticath.ttf") format("truetype"), url("../fonts/helveticath.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Conv_helveticasm';
+  src: url("../fonts/helveticasm.eot");
+  src: local("☺"), url("../fonts/helveticasm.woff") format("woff"), url("../fonts/helveticasm.ttf") format("truetype"), url("../fonts/helveticasm.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*main*/

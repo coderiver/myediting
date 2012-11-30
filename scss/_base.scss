@@ -1,0 +1,88 @@
+/*variables*/
+
+/*for sprites*/
+$experimental-support-for-svg: true;
+$icons-btn-repeat: repeat-x !default;
+$icons: sprite-map("icons/*.png", $spacing: 10px,$btn-repeat: repeat-x);
+@mixin image-size($path) {
+	width: image-width($path);
+	height: image-height($path);
+}
+@mixin sized-sprite($map, $sprite) {
+	background: sprite($map, $sprite) no-repeat;
+	@include image-size(sprite-file($map, $sprite));
+}
+/*font-face*/
+@font-face {
+	font-family: 'MetaMEdiusIt';
+	src: local('☺'), 
+	url('../fonts/metamedit.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_MetaPro-Medium';
+	src: url('../fonts/MetaPro-Medium.eot');
+	src: local('☺'), 
+	url('../fonts/MetaPro-Medium.woff') format('woff'), 
+	url('../fonts/MetaPro-Medium.ttf') format('truetype'), 
+	url('../fonts/MetaPro-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_helveticath';
+	src: url('../fonts/helveticath.eot');
+	src: local('☺'), 
+	url('../fonts/helveticath.woff') format('woff'), 
+	url('../fonts/helveticath.ttf') format('truetype'), 
+	url('../fonts/helveticath.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_helveticasm';
+	src: url('../fonts/helveticasm.eot');
+	src: local('☺'), 
+	url('../fonts/helveticasm.woff') format('woff'), 
+	url('../fonts/helveticasm.ttf') format('truetype'), 
+	url('../fonts/helveticasm.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@mixin hide-text{
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+//extend
+%btn {
+	height: 39px;
+	line-height: 39px;
+	background: #6de9ff;
+	@include background-image(linear-gradient(#6de9ff, #0ab2fe));
+	@include box-shadow(rgba(26,149,192,0.15) 0px 0px 20px inset);
+	font: 23px/39px 'MetaMEdiusIt';
+	text-shadow: 0 1px 1px #04a0f9;
+	color: #fff;
+	&:hover {
+		background: #63b8f5;
+		@include background-image(linear-gradient(#63b8f5, #0971f3));
+	}
+	&:active {
+		@include box-shadow(rgba(21,71,130,0.7) 0px 1px 6px inset);
+	}
+}
+%tr {
+	&:after {
+		top: 100%;
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 0;
+		border-top: 20px solid #11A8DA;
+		border-left: 30px solid transparent;
+	}
+}
+

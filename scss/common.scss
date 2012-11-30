@@ -1,0 +1,419 @@
+@import "compass/css3";
+@import "base";
+/*resets*/
+* { margin: 0; padding: 0;}
+body{
+	font: {
+    family: Arial, Tahoma, sans-serif;
+    weight: normal;
+  }
+  line-height: 1; 
+}
+a {
+	text-decoration: none;
+}
+a img, fieldset {
+	border: none;	
+}
+li {
+	list-style: none;
+}
+input, textarea, button {
+	border: none;
+	outline: none;
+}
+.h1 {
+
+}
+.h2 {
+
+}
+.clr {
+	clear: both;
+	height: 1px;
+	font-size: 1px;
+	line-height: 1px;
+}
+/*general styles*/
+.container {
+	position: relative;
+	width: 1133px;
+	margin: 0 auto;
+}
+/*scroll-down*/
+.scroll-down {
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
+	@include border-radius(50px);
+	background: #6de9ff;
+	@include background-image(linear-gradient(#6de9ff, #0ab2fe));
+	@include box-shadow(rgba(26,149,192,0.15) 0px 0px 20px inset, rgba(0,0,0,0.1) 0 47px 35px);
+	cursor: pointer;
+	z-index: 1000;
+	em {
+		position: absolute;
+		top: 38px;
+		left: 21px;
+		@include sized-sprite($icons, arr-scroll);
+	}
+	span {
+		position: absolute;
+		top: -30px;
+		left: 18px;
+		font: normal 10px 'Conv_MetaPro-Medium', Arial, sans-serif;
+		color: #678598;
+	}
+	i {
+		position: absolute;
+		top: -3px;
+		left: -19px;
+		@include sized-sprite($icons, mouse);
+	}
+	&:hover {
+		background: #6bd7ff;
+		@include background-image(linear-gradient(#6bd7ff, #0a87ff));
+		@include box-shadow(rgba(26,149,192,0.15) 0px 0px 20px inset, rgba(0,0,0,0.2) 0 47px 35px);
+	}
+	&:active{
+		@include box-shadow(rgba(35,97,156,0.8) 0px 4px 9px inset, rgba(0,0,0,0.1) 0 47px 35px);
+	}
+}
+/*social*/
+.social {
+	position: absolute;
+	bottom: 30px;
+	left: 60px;
+	overflow: hidden;
+	li {
+		float: left;
+		margin-right: 8px;
+	}
+	a {
+		display: block;
+	}
+	.social__fb {
+		@include sized-sprite($icons, fb-g);
+		&:hover {
+			@include sized-sprite($icons, fb-h);
+		}
+	}
+	.social__tw {
+		@include sized-sprite($icons, tw-g);
+		&:hover {
+			@include sized-sprite($icons, tw-h);
+		}
+	}
+	.social__pl {
+		@include sized-sprite($icons, pl-g);
+		&:hover {
+			@include sized-sprite($icons, pl-h);
+		}
+	}
+}
+.social_white {
+	.social__fb {@include sized-sprite($icons, fb-w);}
+	.social__tw {@include sized-sprite($icons, tw-w);}
+	.social__pl {@include sized-sprite($icons, pl-w);}
+}
+/*nav-scroll*/
+.nav-scroll {
+	position: fixed;
+	top: 50%;
+	right: 90px;
+	width: 34px;
+	margin-top: -87px;
+	padding: 14px 0 9px 0;
+	@include border-radius(17px);
+	background: #d1dfe8;
+	@include background-image(linear-gradient(left, #d1dfe8, #fff));
+	@include box-shadow(#fff 0px 0px 3px inset);
+	z-index: 1000;
+	li {
+		position: relative;
+		height: 9px;
+		margin-bottom: 12px;
+	}
+	button {
+		position: absolute;
+		top: 0;
+		left: 13px;
+		width: 9px;
+		height: 9px;
+		@include border-radius(5px);
+		@include box-shadow(#a3b3bf 0px 0px 1px 1px inset);
+		background: #fff;
+		cursor: pointer;
+	}
+	.active {
+		background: #a3b3bf;
+		@include box-shadow(rgba(0,0,0,0.25) 0 1px 1px inset);
+	}
+	.nav-scroll__home {
+		height: 25px;		
+		margin-bottom: 0;
+		button {
+			left: 11px;
+			@include box-shadow(none);
+			@include sized-sprite($icons, home);
+			&.active {
+				@include sized-sprite($icons, home-a);
+			}
+		}
+	}
+}
+/*header*/
+.header-out {
+	position: relative;
+	z-index: 10;
+}
+.header {
+	position: relative;
+	border-bottom: 1px solid #fdfdfd;
+	@include box-shadow(#f6f9fb 0px 1px 1px 1px);
+	background: #fff;
+	@include background-image(radial-gradient(bottom, #fff, #fefefe));
+	&:before,
+	&:after {
+	        content: "";
+	        position: absolute;
+	        z-index: -2;
+	        bottom: 13px;
+	        left: 0;
+	        width: 50%;
+	        height: 20%;
+	    -webkit-box-shadow:0 15px 6px rgba(0, 0, 0, 0.4);
+	       -moz-box-shadow:0 15px 6px rgba(0, 0, 0, 0.4);
+	            box-shadow:0 15px 6px rgba(0, 0, 0, 0.4);
+	    -webkit-transform:rotate(-0.2deg);
+	       -moz-transform:rotate(-0.2deg);
+	        -ms-transform:rotate(-0.2deg);
+	         -o-transform:rotate(-0.2deg);
+	            transform:rotate(-0.2deg);
+	}	 
+	&:after {
+	    right: 0;
+	    left: auto;
+	    -webkit-transform:rotate(0.2deg);
+	       -moz-transform:rotate(0.2deg);
+	        -ms-transform:rotate(0.2deg);
+	         -o-transform:rotate(0.2deg);
+	            transform:rotate(0.2deg);
+	}
+	.container {
+		height: 106px;
+	}
+}
+.header_mod {
+	border-bottom: 1px solid #eaf6f8;
+	@include box-shadow(#addce0 0px 1px 0 1px, #3193a4 0px 3px 6px);
+	&:before, &:after {
+		display: none;
+	}
+}
+.header__title {
+	position: absolute;
+	top: 30px;
+	left: 360px;
+	font: 22px/1 'MetaMEdiusIt';
+	color: #678598;
+	letter-spacing: -1px;
+}
+.logo {
+	position: absolute;
+	top: 13px;
+	left: 0;
+	@include sized-sprite($icons, logo);
+	a {
+		display: block;
+		width: 280px;
+		height: 75px;
+		@include hide-text();
+	}
+}
+/*nav*/
+.nav {
+	position: absolute;
+	top: 39px;
+	left: 345px;
+	font: 16px 'MetaMEdiusIt', Arial, sans-serif;
+	overflow: hidden;
+	li {
+		float: left;
+		margin-right: 30px;
+		line-height: 36px;
+	}
+	a {
+		color: #000;
+		&:hover {
+			color: #0baff3;
+		}
+	}
+	.nav__home {
+		a {
+			position: relative;
+			display: block;
+			width: 36px;
+			height: 36px;
+			background: #678598;
+			@include border-radius(18px);
+			&:hover {
+				background: #0baff3;
+			}
+		}
+		i {
+			position: absolute;
+			top: 12px;
+			left: 12px;
+			@include sized-sprite($icons, home-nav);
+		}
+	}
+}
+.nav_mod {
+	left: auto;
+	right: 0;
+}
+.login {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	font-size: 11px;
+	color: #678598;
+	&:hover {
+		color: #0eb3f5;
+	}
+}
+.order-link {
+	position: absolute;
+	top: 35px;
+	right: 0;
+	width: 142px;
+	height: 39px;
+	span {
+		position: absolute;
+		height: 39px;
+	}
+}
+.order-link__black {
+	left: 0;
+	width: 44px;
+	background: #000;
+	@include border-radius(19px 0 0 19px);
+	i {
+		position: absolute;
+		top: 9px;
+		left: 13px;
+		@include sized-sprite($icons, order);
+	}
+}
+.order-link__blue {
+	right: 0;
+	width: 80px;
+	padding-left: 18px;
+	@include border-radius(0 19px 19px 0);
+	@extend %btn;
+}
+/*footer*/
+.footer {
+	background: #000;
+	.container {
+		height: 50px;
+		overflow: hidden;
+	}
+}
+.footer__nav {
+	float: left;
+	margin-top: 20px;
+	li {
+		float: left;
+		margin-right: 30px;		
+	}
+	a {
+		font-size: 12px;
+		color: #fefefe;
+		&:hover {
+			color: #33cdf1;
+		}
+	}
+}
+.copyright {
+	float: right;
+	margin-top: 20px;
+	color: #fff;
+	font-size: 12px;
+}
+/*btn*/
+.btn {
+	display: inline-block;
+	padding: 0 20px 0 25px;
+	@include border-radius(19px);
+	@extend %btn;
+	cursor: pointer;
+}
+/*get-instant*/
+.get-instant {
+	position: absolute;
+	left: 50%;
+	bottom: 90px;
+	height: 116px;
+	padding: 0 40px;
+	margin-left: -295px;
+	@include border-radius(58px);
+	background: #84eafc;
+	@include background-image(linear-gradient(#84eafc, #027de1));
+	@include box-shadow(rgba(0,0,0,0.4) 0 -4px 10px inset);
+	border-top: 2px solid #fff;
+	border-bottom: 5px solid #132a38;
+	text-align: center;
+	text-shadow: 0 2px 2px #0389f3;
+	font: normal 70px/116px 'MetaMEdiusIt', Arial, sans-serif;
+	color: #fff;
+	&:hover {
+		border-top: 2px solid #d8f9ff;
+		background: #87cbfb;
+		@include background-image(linear-gradient(#87cbfb, #0345ea));
+	}
+	&:active {
+		height: 118px;
+		border-top: none;
+		@include box-shadow(#2c374c 0px 7px 6px inset);
+		font: normal 70px/120px 'MetaMEdiusIt', Arial, sans-serif;
+	}
+}
+/*btn-mod*/
+.btn-form {
+	height: 60px;
+	padding: 0 50px;
+	@include border-radius(30px);
+	border-bottom: 2px solid #86bc9e;
+	background: #84eafc;
+	@include background-image(linear-gradient(#84eafc, #027de1));
+	@include box-shadow(rgba(0,0,0,0.4) 0 -4px 10px inset, #d7f9ff 0 1px 1px inset);
+	text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+	font: normal 40px/60px 'MetaMEdiusIt', Arial, sans-serif;
+	color: #fff;
+	cursor: pointer;
+	&:hover {
+		background: #82c4f6;
+		@include background-image(linear-gradient(#82c4f6, #0341de));
+	}
+	&:active {
+		@include box-shadow(rgba(0,0,0,0.5) 3px 5px 5px inset);
+	}
+}
+/*transparent*/
+.transparent {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+.z-index {
+	z-index: 110 !important;
+}

@@ -1,0 +1,8 @@
+/* line 3, ../scss/ie.scss */
+.ie8 .cost__check input, .ltie8 .cost__check input {
+  filter: alpha(opacity=100);
+}
+/* line 8, ../scss/ie.scss */
+.ie8 .cost__field input, .ltie8 .cost__field input {
+  line-height: 62px;
+}
