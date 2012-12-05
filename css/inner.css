@@ -635,13 +635,13 @@
 /* line 421, ../scss/inner.scss */
 .samples {
   background: #52b8c7;
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM1MmI4YzciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGUyY2EiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM1MmI4YzciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGUyY2EiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #52b8c7), color-stop(100%, #cde2ca));
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -webkit-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -moz-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -o-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #52b8c7), color-stop(100%, #cde2ca));
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -webkit-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -moz-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -o-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), linear-gradient(#52b8c7 50%, #cde2ca);
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }

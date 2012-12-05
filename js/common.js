@@ -62,14 +62,14 @@ $('body').bind('mousewheel', function(event, delta) {
 });
 function nextpage () {
 	var btn_act1 = $('.nav-scroll button.active').parent().next().children('button').val();
-	  		$(window).scrollTo("."+btn_act1, 1200, function() {
+	  		$(window).scrollTo("."+btn_act1, 1200, {easing:'easeOutExpo'}, function() {
 	  			$('body').removeClass('running');
 	  			//alert('finished');
 			});
 }
 function prevpage () {
 	var btn_act2 = $('.nav-scroll button.active').parent().prev().children('button').val();
-			$(window).scrollTo("."+btn_act2, 1200, function() {
+			$(window).scrollTo("."+btn_act2, 1200, {easing:'easeOutExpo'}, function() {
 	  			$('body').removeClass('running');
 	  			//alert('finished');
 			});

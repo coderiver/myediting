@@ -136,8 +136,8 @@ input, textarea, button {
 /*scroll-down*/
 /* line 44, ../scss/common.scss */
 .scroll-down {
-  position: absolute;
-  bottom: -50px;
+  position: fixed;
+  bottom: -20px;
   left: 50%;
   width: 100px;
   height: 100px;
@@ -161,7 +161,11 @@ input, textarea, button {
   cursor: pointer;
   z-index: 1000;
 }
-/* line 57, ../scss/common.scss */
+/* line 58, ../scss/common.scss */
+.scroll-down:hover span {
+  display: block;
+}
+/* line 62, ../scss/common.scss */
 .scroll-down em {
   position: absolute;
   top: 38px;
@@ -170,15 +174,16 @@ input, textarea, button {
   width: 59px;
   height: 32px;
 }
-/* line 63, ../scss/common.scss */
+/* line 68, ../scss/common.scss */
 .scroll-down span {
+  display: none;
   position: absolute;
   top: -30px;
   left: 18px;
   font: normal 10px 'Conv_MetaPro-Medium', Arial, sans-serif;
   color: #678598;
 }
-/* line 70, ../scss/common.scss */
+/* line 76, ../scss/common.scss */
 .scroll-down i {
   position: absolute;
   top: -3px;
@@ -187,7 +192,7 @@ input, textarea, button {
   width: 13px;
   height: 15px;
 }
-/* line 76, ../scss/common.scss */
+/* line 82, ../scss/common.scss */
 .scroll-down:hover {
   background: #6bd7ff;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZiZDdmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBhODdmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -201,7 +206,7 @@ input, textarea, button {
   -moz-box-shadow: rgba(26, 149, 192, 0.15) 0px 0px 20px inset, rgba(0, 0, 0, 0.2) 0 47px 35px;
   box-shadow: rgba(26, 149, 192, 0.15) 0px 0px 20px inset, rgba(0, 0, 0, 0.2) 0 47px 35px;
 }
-/* line 81, ../scss/common.scss */
+/* line 87, ../scss/common.scss */
 .scroll-down:active {
   -webkit-box-shadow: rgba(35, 97, 156, 0.8) 0px 4px 9px inset, rgba(0, 0, 0, 0.1) 0 47px 35px;
   -moz-box-shadow: rgba(35, 97, 156, 0.8) 0px 4px 9px inset, rgba(0, 0, 0, 0.1) 0 47px 35px;
@@ -209,72 +214,72 @@ input, textarea, button {
 }
 
 /*social*/
-/* line 86, ../scss/common.scss */
+/* line 92, ../scss/common.scss */
 .social {
   position: absolute;
   bottom: 30px;
   left: 60px;
   overflow: hidden;
 }
-/* line 91, ../scss/common.scss */
+/* line 97, ../scss/common.scss */
 .social li {
   float: left;
   margin-right: 8px;
 }
-/* line 95, ../scss/common.scss */
+/* line 101, ../scss/common.scss */
 .social a {
   display: block;
 }
-/* line 98, ../scss/common.scss */
+/* line 104, ../scss/common.scss */
 .social .social__fb {
   background: url('../img/icons-s3df51c8f70.png') 0 -2573px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 100, ../scss/common.scss */
+/* line 106, ../scss/common.scss */
 .social .social__fb:hover {
   background: url('../img/icons-s3df51c8f70.png') 0 -2609px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 104, ../scss/common.scss */
+/* line 110, ../scss/common.scss */
 .social .social__tw {
   background: url('../img/icons-s3df51c8f70.png') 0 -2501px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 106, ../scss/common.scss */
+/* line 112, ../scss/common.scss */
 .social .social__tw:hover {
   background: url('../img/icons-s3df51c8f70.png') 0 -2537px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 110, ../scss/common.scss */
+/* line 116, ../scss/common.scss */
 .social .social__pl {
   background: url('../img/icons-s3df51c8f70.png') 0 -2753px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 112, ../scss/common.scss */
+/* line 118, ../scss/common.scss */
 .social .social__pl:hover {
   background: url('../img/icons-s3df51c8f70.png') 0 -2717px no-repeat;
   width: 26px;
   height: 26px;
 }
 
-/* line 118, ../scss/common.scss */
+/* line 124, ../scss/common.scss */
 .social_white .social__fb {
   background: url('../img/icons-s3df51c8f70.png') 0 -2681px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 119, ../scss/common.scss */
+/* line 125, ../scss/common.scss */
 .social_white .social__tw {
   background: url('../img/icons-s3df51c8f70.png') 0 -2645px no-repeat;
   width: 26px;
   height: 26px;
 }
-/* line 120, ../scss/common.scss */
+/* line 126, ../scss/common.scss */
 .social_white .social__pl {
   background: url('../img/icons-s3df51c8f70.png') 0 -2915px no-repeat;
   width: 26px;
@@ -282,7 +287,7 @@ input, textarea, button {
 }
 
 /*nav-scroll*/
-/* line 123, ../scss/common.scss */
+/* line 129, ../scss/common.scss */
 .nav-scroll {
   position: fixed;
   top: 50%;
@@ -308,13 +313,13 @@ input, textarea, button {
   box-shadow: white 0px 0px 3px inset;
   z-index: 1000;
 }
-/* line 135, ../scss/common.scss */
+/* line 141, ../scss/common.scss */
 .nav-scroll li {
   position: relative;
   height: 9px;
   margin-bottom: 12px;
 }
-/* line 140, ../scss/common.scss */
+/* line 146, ../scss/common.scss */
 .nav-scroll button {
   position: absolute;
   top: 0;
@@ -332,19 +337,19 @@ input, textarea, button {
   background: #fff;
   cursor: pointer;
 }
-/* line 151, ../scss/common.scss */
+/* line 157, ../scss/common.scss */
 .nav-scroll .active {
   background: #a3b3bf;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px inset;
   box-shadow: rgba(0, 0, 0, 0.25) 0 1px 1px inset;
 }
-/* line 155, ../scss/common.scss */
+/* line 161, ../scss/common.scss */
 .nav-scroll .nav-scroll__home {
   height: 25px;
   margin-bottom: 0;
 }
-/* line 158, ../scss/common.scss */
+/* line 164, ../scss/common.scss */
 .nav-scroll .nav-scroll__home button {
   left: 11px;
   -webkit-box-shadow: none;
@@ -354,21 +359,35 @@ input, textarea, button {
   width: 12px;
   height: 12px;
 }
-/* line 162, ../scss/common.scss */
+/* line 168, ../scss/common.scss */
 .nav-scroll .nav-scroll__home button.active {
   background: url('../img/icons-s3df51c8f70.png') 0 -3023px no-repeat;
   width: 12px;
   height: 12px;
 }
 
+/*all containers*/
+/* line 182, ../scss/common.scss */
+.header-out,
+.fast,
+.what-we-do,
+.about,
+.why-us,
+.reviews,
+.samples,
+.footer {
+  overflow: hidden;
+  min-width: 1200px;
+}
+
 /*header*/
-/* line 169, ../scss/common.scss */
+/* line 187, ../scss/common.scss */
 .header-out {
   position: relative;
   z-index: 10;
 }
 
-/* line 173, ../scss/common.scss */
+/* line 191, ../scss/common.scss */
 .header {
   position: relative;
   border-bottom: 1px solid #fdfdfd;
@@ -384,7 +403,7 @@ input, textarea, button {
   background-image: -o-radial-gradient(bottom, #ffffff, #fefefe);
   background-image: radial-gradient(bottom, #ffffff, #fefefe);
 }
-/* line 180, ../scss/common.scss */
+/* line 198, ../scss/common.scss */
 .header:before, .header:after {
   content: "";
   position: absolute;
@@ -402,7 +421,7 @@ input, textarea, button {
   -o-transform: rotate(-0.2deg);
   transform: rotate(-0.2deg);
 }
-/* line 197, ../scss/common.scss */
+/* line 215, ../scss/common.scss */
 .header:after {
   right: 0;
   left: auto;
@@ -412,24 +431,24 @@ input, textarea, button {
   -o-transform: rotate(0.2deg);
   transform: rotate(0.2deg);
 }
-/* line 206, ../scss/common.scss */
+/* line 224, ../scss/common.scss */
 .header .container {
   height: 106px;
 }
 
-/* line 210, ../scss/common.scss */
+/* line 228, ../scss/common.scss */
 .header_mod {
   border-bottom: 1px solid #eaf6f8;
   -webkit-box-shadow: #addce0 0px 1px 0 1px, #3193a4 0px 3px 6px;
   -moz-box-shadow: #addce0 0px 1px 0 1px, #3193a4 0px 3px 6px;
   box-shadow: #addce0 0px 1px 0 1px, #3193a4 0px 3px 6px;
 }
-/* line 213, ../scss/common.scss */
+/* line 231, ../scss/common.scss */
 .header_mod:before, .header_mod:after {
   display: none;
 }
 
-/* line 217, ../scss/common.scss */
+/* line 235, ../scss/common.scss */
 .header__title {
   position: absolute;
   top: 30px;
@@ -439,7 +458,7 @@ input, textarea, button {
   letter-spacing: -1px;
 }
 
-/* line 225, ../scss/common.scss */
+/* line 243, ../scss/common.scss */
 .logo {
   position: absolute;
   top: 13px;
@@ -448,7 +467,7 @@ input, textarea, button {
   width: 280px;
   height: 75px;
 }
-/* line 230, ../scss/common.scss */
+/* line 248, ../scss/common.scss */
 .logo a {
   display: block;
   width: 280px;
@@ -459,7 +478,7 @@ input, textarea, button {
 }
 
 /*nav*/
-/* line 238, ../scss/common.scss */
+/* line 256, ../scss/common.scss */
 .nav {
   position: absolute;
   top: 39px;
@@ -467,21 +486,21 @@ input, textarea, button {
   font: 16px 'MetaMEdiusIt', Arial, sans-serif;
   overflow: hidden;
 }
-/* line 244, ../scss/common.scss */
+/* line 262, ../scss/common.scss */
 .nav li {
   float: left;
   margin-right: 30px;
   line-height: 36px;
 }
-/* line 249, ../scss/common.scss */
+/* line 267, ../scss/common.scss */
 .nav a {
   color: #000;
 }
-/* line 251, ../scss/common.scss */
+/* line 269, ../scss/common.scss */
 .nav a:hover {
   color: #0baff3;
 }
-/* line 256, ../scss/common.scss */
+/* line 274, ../scss/common.scss */
 .nav .nav__home a {
   position: relative;
   display: block;
@@ -494,11 +513,11 @@ input, textarea, button {
   -o-border-radius: 18px;
   border-radius: 18px;
 }
-/* line 263, ../scss/common.scss */
+/* line 281, ../scss/common.scss */
 .nav .nav__home a:hover {
   background: #0baff3;
 }
-/* line 267, ../scss/common.scss */
+/* line 285, ../scss/common.scss */
 .nav .nav__home i {
   position: absolute;
   top: 12px;
@@ -508,13 +527,13 @@ input, textarea, button {
   height: 11px;
 }
 
-/* line 275, ../scss/common.scss */
+/* line 293, ../scss/common.scss */
 .nav_mod {
   left: auto;
   right: 0;
 }
 
-/* line 279, ../scss/common.scss */
+/* line 297, ../scss/common.scss */
 .login {
   position: absolute;
   top: 12px;
@@ -522,12 +541,12 @@ input, textarea, button {
   font-size: 11px;
   color: #678598;
 }
-/* line 285, ../scss/common.scss */
+/* line 303, ../scss/common.scss */
 .login:hover {
   color: #0eb3f5;
 }
 
-/* line 289, ../scss/common.scss */
+/* line 307, ../scss/common.scss */
 .order-link {
   position: absolute;
   top: 35px;
@@ -535,13 +554,13 @@ input, textarea, button {
   width: 142px;
   height: 39px;
 }
-/* line 295, ../scss/common.scss */
+/* line 313, ../scss/common.scss */
 .order-link span {
   position: absolute;
   height: 39px;
 }
 
-/* line 300, ../scss/common.scss */
+/* line 318, ../scss/common.scss */
 .order-link__black {
   left: 0;
   width: 44px;
@@ -552,7 +571,7 @@ input, textarea, button {
   -o-border-radius: 19px 0 0 19px;
   border-radius: 19px 0 0 19px;
 }
-/* line 305, ../scss/common.scss */
+/* line 323, ../scss/common.scss */
 .order-link__black i {
   position: absolute;
   top: 9px;
@@ -562,7 +581,7 @@ input, textarea, button {
   height: 20px;
 }
 
-/* line 312, ../scss/common.scss */
+/* line 330, ../scss/common.scss */
 .order-link__blue {
   right: 0;
   width: 80px;
@@ -575,37 +594,37 @@ input, textarea, button {
 }
 
 /*footer*/
-/* line 320, ../scss/common.scss */
+/* line 338, ../scss/common.scss */
 .footer {
   background: #000;
 }
-/* line 322, ../scss/common.scss */
+/* line 340, ../scss/common.scss */
 .footer .container {
   height: 50px;
   overflow: hidden;
 }
 
-/* line 327, ../scss/common.scss */
+/* line 345, ../scss/common.scss */
 .footer__nav {
   float: left;
   margin-top: 20px;
 }
-/* line 330, ../scss/common.scss */
+/* line 348, ../scss/common.scss */
 .footer__nav li {
   float: left;
   margin-right: 30px;
 }
-/* line 334, ../scss/common.scss */
+/* line 352, ../scss/common.scss */
 .footer__nav a {
   font-size: 12px;
   color: #fefefe;
 }
-/* line 337, ../scss/common.scss */
+/* line 355, ../scss/common.scss */
 .footer__nav a:hover {
   color: #33cdf1;
 }
 
-/* line 342, ../scss/common.scss */
+/* line 360, ../scss/common.scss */
 .copyright {
   float: right;
   margin-top: 20px;
@@ -614,7 +633,7 @@ input, textarea, button {
 }
 
 /*btn*/
-/* line 349, ../scss/common.scss */
+/* line 367, ../scss/common.scss */
 .btn {
   display: inline-block;
   padding: 0 20px 0 25px;
@@ -627,7 +646,7 @@ input, textarea, button {
 }
 
 /*get-instant*/
-/* line 357, ../scss/common.scss */
+/* line 375, ../scss/common.scss */
 .get-instant {
   position: absolute;
   left: 50%;
@@ -658,7 +677,7 @@ input, textarea, button {
   font: normal 70px/116px "MetaMEdiusIt", Arial, sans-serif;
   color: #fff;
 }
-/* line 374, ../scss/common.scss */
+/* line 392, ../scss/common.scss */
 .get-instant:hover {
   border-top: 2px solid #d8f9ff;
   background: #87cbfb;
@@ -670,7 +689,7 @@ input, textarea, button {
   background-image: -o-linear-gradient(#87cbfb, #0345ea);
   background-image: linear-gradient(#87cbfb, #0345ea);
 }
-/* line 379, ../scss/common.scss */
+/* line 397, ../scss/common.scss */
 .get-instant:active {
   height: 118px;
   border-top: none;
@@ -681,7 +700,7 @@ input, textarea, button {
 }
 
 /*btn-mod*/
-/* line 387, ../scss/common.scss */
+/* line 405, ../scss/common.scss */
 .btn-form {
   height: 60px;
   padding: 0 50px;
@@ -707,7 +726,7 @@ input, textarea, button {
   color: #fff;
   cursor: pointer;
 }
-/* line 399, ../scss/common.scss */
+/* line 417, ../scss/common.scss */
 .btn-form:hover {
   background: #82c4f6;
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzgyYzRmNiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAzNDFkZSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
@@ -718,7 +737,7 @@ input, textarea, button {
   background-image: -o-linear-gradient(#82c4f6, #0341de);
   background-image: linear-gradient(#82c4f6, #0341de);
 }
-/* line 403, ../scss/common.scss */
+/* line 421, ../scss/common.scss */
 .btn-form:active {
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 3px 5px 5px inset;
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 3px 5px 5px inset;
@@ -726,7 +745,7 @@ input, textarea, button {
 }
 
 /*transparent*/
-/* line 408, ../scss/common.scss */
+/* line 426, ../scss/common.scss */
 .transparent {
   display: none;
   position: fixed;
@@ -737,7 +756,7 @@ input, textarea, button {
   z-index: 100;
 }
 
-/* line 417, ../scss/common.scss */
+/* line 435, ../scss/common.scss */
 .z-index {
   z-index: 110 !important;
 }
@@ -1583,13 +1602,13 @@ input, textarea, button {
 /* line 421, ../scss/inner.scss */
 .samples {
   background: #52b8c7;
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM1MmI4YzciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGUyY2EiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiM1MmI4YzciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGUyY2EiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #52b8c7), color-stop(100%, #cde2ca));
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -webkit-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -moz-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), -o-linear-gradient(#52b8c7 50%, #cde2ca);
-  background-image: url('../img/../img/bgs/bg6.png?1354110213'), linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(50%, #52b8c7), color-stop(100%, #cde2ca));
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -webkit-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -moz-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), -o-linear-gradient(#52b8c7 50%, #cde2ca);
+  background-image: url('../img/../img/bgs/bg6.png?1354706152'), linear-gradient(#52b8c7 50%, #cde2ca);
   background-repeat: no-repeat;
   background-position: 50% 100%;
 }
