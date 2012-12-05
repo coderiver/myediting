@@ -44,29 +44,36 @@ $(window).scroll(function () {
   };
 });
 //nav-scroll on scroll
-//var running = 1;
-$('body').bind('mousewheel', function(event, delta) {  
-	//if (running != 0) {
-		//var running = 0;		
-	  if (delta < 0) { 
-	  	var btn_act1 = $('.nav-scroll button.active').parent().next().children('button').val();	
-	  	$(window).scrollTo("."+btn_act1, 800, function() { 
-	  		//var running = 1;        
-			});
-	  } 
-	  else { 
-	  	var btn_act2 = $('.nav-scroll button.active').parent().prev().children('button').val();	
-			$(window).scrollTo("."+btn_act2, 800, function() { 
-	  		//var running = 1;        
-			});
-	 // } 	  
-  }
-  //else {
-  //	alert('fsd');
-  //}
-  return false; 
+$('body').bind('mousewheel', function(event, delta) {
+	if ($('body').hasClass('running')) {
+		//alert('i am runnig dont talk to me');
+	}
+	else{
+		//alert('gogogo');
+		$('body').addClass('running');
+	  	if (delta < 0) {
+	  		nextpage();
+	  	}
+	  	else {
+	  		prevpage();
+	  	}
+  	}
+  return false;
 });
-
+function nextpage () {
+	var btn_act1 = $('.nav-scroll button.active').parent().next().children('button').val();
+	  		$(window).scrollTo("."+btn_act1, 1200, function() {
+	  			$('body').removeClass('running');
+	  			//alert('finished');
+			});
+}
+function prevpage () {
+	var btn_act2 = $('.nav-scroll button.active').parent().prev().children('button').val();
+			$(window).scrollTo("."+btn_act2, 1200, function() {
+	  			$('body').removeClass('running');
+	  			//alert('finished');
+			});
+}
 //hide all popups
 $('.transparent').click(function() {
 	$('.datepicker').fadeOut();
